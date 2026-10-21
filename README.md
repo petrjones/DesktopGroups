@@ -12,26 +12,37 @@ Desktop Groups is a free Windows utility for people who regularly open the same 
 
 - Create named and color-coded desktop groups.
 - Launch an entire group of applications with one click.
+- Drag application tiles in Edit mode to change and save their launch order.
+- Temporarily hide selected groups from the Windows desktop without deleting their settings.
 - Save and restore window positions, sizes, monitors, and maximized states.
-- Work with one or multiple monitors.
-- Respect the active Windows virtual desktop.
-- Safely close all recognized windows in a group.
-- Allow applications to prompt for saving unsaved documents before closing.
+- Clearly distinguish minimized and non-minimized windows while saving a layout.
+- Work with one or multiple monitors and Windows virtual desktops.
+- Safely close all recognized windows in a group while allowing applications to prompt for unsaved changes.
 - Keep applications, PDF manuals, documents, shortcuts, and web links together.
-- Optionally show the groups automatically after signing in to Windows.
+- Optionally show groups automatically after signing in to Windows.
 - Choose from 256 group colors.
 - Czech, English, and Spanish user interface.
 - Microsoft PowerToys is not required.
+
+## What's new in 1.1.0
+
+- Reorder applications within a group by dragging their tiles. **Launch all** uses the saved left-to-right, top-to-bottom order.
+- Show or hide individual desktop groups without removing their contents or settings.
+- Improved minimized-window detection for modern Windows 11 applications.
+- Added clear **MINIMIZED** and **NOT MINIMIZED** status labels when saving layouts.
+- Excluded the Windows `Program Manager` shell window from layout selection.
+- Reduced window flashing: layout stabilization now changes a window only when its state, monitor, position, or size actually differs.
 
 ## Quick start
 
 1. Install Desktop Groups.
 2. Click **+ Group** and enter a name.
 3. Enable **Edit** mode and add applications, documents, shortcuts, or web addresses.
-4. Open the applications and arrange their windows as required.
-5. Click **Save window layout** and select the windows belonging to the group.
-6. The next time you work, click **Launch all**. Desktop Groups will start the applications and restore their saved window layout.
-7. Use **Close all** to safely request that the recognized windows close. Applications with unsaved documents can still ask you to save your changes.
+4. Drag tiles to set the order used by **Launch all**.
+5. Open the applications and arrange their windows as required.
+6. Click **Save window layout** and select the windows belonging to the group.
+7. Next time, click **Launch all**. Desktop Groups starts the applications and restores their saved layout.
+8. Use **Close all** to safely request that recognized windows close. Applications with unsaved documents can still ask you to save changes.
 
 ## System requirements
 
@@ -42,7 +53,7 @@ Desktop Groups is a free Windows utility for people who regularly open the same 
 
 ## Updates and configuration
 
-New installer versions update the existing installation instead of creating additional copies. Saved groups and window layouts are preserved during an update.
+New installer versions update the existing installation instead of creating additional copies. Saved groups, launch order, visibility settings, and window layouts are preserved during an update.
 
 ## Languages
 
