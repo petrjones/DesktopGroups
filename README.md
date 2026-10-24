@@ -13,25 +13,37 @@ Desktop Groups is a free Windows utility for people who regularly open the same 
 - Create named and color-coded desktop groups.
 - Launch an entire group of applications with one click.
 - Drag application tiles in Edit mode to change and save their launch order.
+- Freely resize desktop group panels; tiles automatically reflow to fit the available width.
+- Keep the group header and controls visible while only the content area scrolls.
 - Temporarily hide selected groups from the Windows desktop without deleting their settings.
+- Save separate window layouts for different monitor counts and select the matching variant automatically.
+- Safely offer the nearest saved layout when the current monitor setup has no exact variant.
 - Save and restore window positions, sizes, monitors, and maximized states.
 - Clearly distinguish minimized and non-minimized windows while saving a layout.
 - Work with one or multiple monitors and Windows virtual desktops.
 - Safely close all recognized windows in a group while allowing applications to prompt for unsaved changes.
+- Export, import, and restore the complete configuration.
+- Automatically keep the previous configuration and up to ten timestamped backups.
 - Keep applications, PDF manuals, documents, shortcuts, and web links together.
 - Optionally show groups automatically after signing in to Windows.
 - Choose from 256 group colors.
 - Czech, English, and Spanish user interface.
 - Microsoft PowerToys is not required.
 
-## What's new in 1.1.0
+## What's new in 1.3.0
 
-- Reorder applications within a group by dragging their tiles. **Launch all** uses the saved left-to-right, top-to-bottom order.
-- Show or hide individual desktop groups without removing their contents or settings.
-- Improved minimized-window detection for modern Windows 11 applications.
-- Added clear **MINIMIZED** and **NOT MINIMIZED** status labels when saving layouts.
-- Excluded the Windows `Program Manager` shell window from layout selection.
-- Reduced window flashing: layout stabilization now changes a window only when its state, monitor, position, or size actually differs.
+This release includes all improvements developed since the last public GitHub release, version 1.1.0.
+
+- Added freely resizable desktop group panels with automatic tile reflow.
+- Long group names wrap safely and remain separated from the header controls.
+- When a panel is short, only its content scrolls; the group name and controls stay visible.
+- Added separate saved layouts for different monitor counts, such as one, two, or three monitors.
+- Desktop Groups automatically selects the matching layout when the monitor setup changes.
+- If no exact layout exists, the application offers the nearest available layout without deleting the other variants.
+- Added **Export settings**, **Import settings**, and **Restore previous configuration** commands.
+- Added automatic `groups.json.bak` creation and a timestamped history of up to ten backups.
+- Existing groups and layouts are migrated automatically and remain available after updating.
+- Introduced the refreshed PJSoft visual design and the new Desktop Groups application icon.
 
 ## Quick start
 
@@ -40,9 +52,10 @@ Desktop Groups is a free Windows utility for people who regularly open the same 
 3. Enable **Edit** mode and add applications, documents, shortcuts, or web addresses.
 4. Drag tiles to set the order used by **Launch all**.
 5. Open the applications and arrange their windows as required.
-6. Click **Save window layout** and select the windows belonging to the group.
-7. Next time, click **Launch all**. Desktop Groups starts the applications and restores their saved layout.
+6. Click **Save window layout**. A separate variant is stored for the current number of monitors.
+7. Next time, click **Launch all**. Desktop Groups starts the applications and restores the appropriate saved layout.
 8. Use **Close all** to safely request that recognized windows close. Applications with unsaved documents can still ask you to save changes.
+9. Use the **Data** menu to export, import, or restore your configuration.
 
 ## System requirements
 
@@ -53,7 +66,9 @@ Desktop Groups is a free Windows utility for people who regularly open the same 
 
 ## Updates and configuration
 
-New installer versions update the existing installation instead of creating additional copies. Saved groups, launch order, visibility settings, and window layouts are preserved during an update.
+New installer versions update the existing installation instead of creating additional copies. Saved groups, launch order, visibility settings, panel sizes, and window-layout variants are preserved during an update.
+
+The configuration is stored in `groups.json`. Before relevant changes, Desktop Groups keeps `groups.json.bak` and up to ten timestamped files in the `Backups` folder. The **Data** menu can transfer the complete configuration to another computer.
 
 ## Languages
 
